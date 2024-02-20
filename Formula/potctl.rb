@@ -10,7 +10,7 @@ class Potctl < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/datasance/potctl/releases/download/v1.1.0/potctl_1.1.0_macos_arm64.tar.gz"
-      sha256 "bdc30a1d14bab6c15e7e1e30b2b0f8983024c8958f2131f44f0428eb099dfd2a"
+      sha256 "0d4b03d9495af1460f80116d39666e4b40256b7b3fd530bba42048246e9e3d7a"
 
       def install
         bin.install "potctl"
@@ -18,7 +18,7 @@ class Potctl < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/datasance/potctl/releases/download/v1.1.0/potctl_1.1.0_macos_amd64.tar.gz"
-      sha256 "5bb374423180ad7d1f0e8b5b43141032706d40476ffb25bf259dc559166a82ca"
+      sha256 "9322277a5d1b09e6736714610420ca669941472000569a1778dbba4d8b437e74"
 
       def install
         bin.install "potctl"
@@ -27,17 +27,17 @@ class Potctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/datasance/potctl/releases/download/v1.1.0/potctl_1.1.0_amd64.tar.gz"
-      sha256 "e11b65007abfb0f549b4551525779cf948387793c2094771b348d8cd3bdefc98"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/datasance/potctl/releases/download/v1.1.0/potctl_1.1.0_arm64.tar.gz"
+      sha256 "2c58fbe0b32befd1411384357113d8133e029a5c3308ce707407c61e810b97bc"
 
       def install
         bin.install "potctl"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/datasance/potctl/releases/download/v1.1.0/potctl_1.1.0_arm64.tar.gz"
-      sha256 "b123cc496d5fe154f17fb2e13904f6ff3433648764ed292110bfdc9ab75f7113"
+    if Hardware::CPU.intel?
+      url "https://github.com/datasance/potctl/releases/download/v1.1.0/potctl_1.1.0_amd64.tar.gz"
+      sha256 "aa9e0d5ae4915edfcf7cea10cfa87f38a769681672c3dbf393666cd3aadd1c18"
 
       def install
         bin.install "potctl"
@@ -45,7 +45,7 @@ class Potctl < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/datasance/potctl/releases/download/v1.1.0/potctl_1.1.0_armv6.tar.gz"
-      sha256 "5ea9261b99c8f8f896a41bb0d1bab625e9a010d07ed7758c66809ba0c454e061"
+      sha256 "6a7a8009dd4d23a13685ff59efe84ffa3b7d84a760378543d203808cc9c8cc30"
 
       def install
         bin.install "potctl"
