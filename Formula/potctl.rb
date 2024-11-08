@@ -5,20 +5,20 @@
 class Potctl < Formula
   desc "CLI for iofog"
   homepage "https://github.com/datasance/potctl"
-  version "1.3.0"
+  version "1.3.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/datasance/potctl/releases/download/v1.3.0/potctl_1.3.0_macos_arm64.tar.gz"
-      sha256 "6288e4d63de7aa45184d1bb9b98cf7c4f8600c1d8b34d81fee124cc0cb9555a2"
+      url "https://github.com/datasance/potctl/releases/download/v1.3.1/potctl_1.3.1_macos_arm64.tar.gz"
+      sha256 "cb4cf079c77974edfdeb848e1cc271a6a62739cd4d8dea80b5edd23b1d1492a1"
 
       def install
         bin.install "potctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/datasance/potctl/releases/download/v1.3.0/potctl_1.3.0_macos_amd64.tar.gz"
-      sha256 "58fbec33b0f376b44c0a6b70123731c35cce08a332bfe5d18259fc02d8f18daf"
+      url "https://github.com/datasance/potctl/releases/download/v1.3.1/potctl_1.3.1_macos_amd64.tar.gz"
+      sha256 "0c6927bbd0365ef12a3e52db6b2df42cb9af5f7b256136e09c74911b8cf4d3aa"
 
       def install
         bin.install "potctl"
@@ -27,25 +27,25 @@ class Potctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/datasance/potctl/releases/download/v1.3.0/potctl_1.3.0_armv6.tar.gz"
-      sha256 "230531198773ead81f091ce44a3ef5440e7ed06c2538831cce5e1a881b7e98f3"
-
-      def install
-        bin.install "potctl"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/datasance/potctl/releases/download/v1.3.0/potctl_1.3.0_arm64.tar.gz"
-      sha256 "db6076baba1378ca7e8e839f0f955b9639495b1d2b928e047a9a47c5dcf410ee"
+      url "https://github.com/datasance/potctl/releases/download/v1.3.1/potctl_1.3.1_arm64.tar.gz"
+      sha256 "7e28cbeac8fc100e936eea466ded953aa3fb9b169028ff9eb79e21f931509ed4"
 
       def install
         bin.install "potctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/datasance/potctl/releases/download/v1.3.0/potctl_1.3.0_amd64.tar.gz"
-      sha256 "10d2874ba9d856f6f18d82d50c883abaf9cc15d91eb2da6f02839db6cb4f4395"
+      url "https://github.com/datasance/potctl/releases/download/v1.3.1/potctl_1.3.1_amd64.tar.gz"
+      sha256 "e515669a36ab6b59d9dbd296f77a729a0d8c53eede5e26d18c592121f65feab7"
+
+      def install
+        bin.install "potctl"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/datasance/potctl/releases/download/v1.3.1/potctl_1.3.1_armv6.tar.gz"
+      sha256 "5424998335aa9d84c4f725fa86941be0f78bdc8767d38c86c19c05e21df903fd"
 
       def install
         bin.install "potctl"
