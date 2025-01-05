@@ -5,12 +5,12 @@
 class Potctl < Formula
   desc "CLI for managing Datasance PoT's Distributed Edge Compute clusters"
   homepage "https://github.com/datasance/potctl"
-  version "1.3.3"
+  version "1.3.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/datasance/potctl/releases/download/v1.3.3/potctl_1.3.3_macos_amd64.tar.gz"
-      sha256 "00c9803ceb4c474d55dbdc60b3e2c04cfe61da602a4c6033b4480248217acce4"
+      url "https://github.com/datasance/potctl/releases/download/v1.3.4/potctl_1.3.4_macos_amd64.tar.gz"
+      sha256 "828ed8a76fc7c6d855b20b70cf291535f62abe57440397b03bbf7995c705a53a"
 
       def install
         bin.install "potctl"
@@ -20,24 +20,24 @@ class Potctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/datasance/potctl/releases/download/v1.3.3/potctl_1.3.3_armv6.tar.gz"
-      sha256 "35c56843521c2bb246d9339a8baba80b874d44845f9709b7a7a9737f38851e6c"
+      url "https://github.com/datasance/potctl/releases/download/v1.3.4/potctl_1.3.4_armv6.tar.gz"
+      sha256 "15a5a507f96ce66380986252edaf25a704fe341a18264ada57c4c6693fbdd207"
 
       def install
         bin.install "potctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/datasance/potctl/releases/download/v1.3.3/potctl_1.3.3_arm64.tar.gz"
-      sha256 "3e6a906efcda5cabe6003b482e5a7fa5d83b0e446b2621f55d6ca0cddbaf2370"
+      url "https://github.com/datasance/potctl/releases/download/v1.3.4/potctl_1.3.4_arm64.tar.gz"
+      sha256 "556b368e8d135326fb115a3eade1aa2adffe05372b13e5f0e731c8a1112a89cd"
 
       def install
         bin.install "potctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/datasance/potctl/releases/download/v1.3.3/potctl_1.3.3_amd64.tar.gz"
-      sha256 "e7d31dfe6636f503b9907435c0d62e7fc2f3e31d742babfe2168e189d7cbd14b"
+      url "https://github.com/datasance/potctl/releases/download/v1.3.4/potctl_1.3.4_amd64.tar.gz"
+      sha256 "71badcf9cfadc2b2151bec02eeb7a135fa0b0bd56d4a76dccfdbc93cafe423c2"
 
       def install
         bin.install "potctl"
