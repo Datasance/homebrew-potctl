@@ -10,7 +10,7 @@ class Potctl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Datasance/potctl/releases/download/v3.8.0-rc.1/potctl_3.8.0-rc.1_macos_amd64.tar.gz"
-      sha256 "d07e1010d1b7923b1858623a006ba4e3d0df5ed7418935debd369f7c386b5348"
+      sha256 "a38f1e79356e7629ad76c2d3ae2bcc09d703b3dcb7e02e74be62c39c6d93fc07"
 
       define_method(:install) do
         bin.install "potctl"
@@ -18,7 +18,7 @@ class Potctl < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Datasance/potctl/releases/download/v3.8.0-rc.1/potctl_3.8.0-rc.1_macos_arm64.tar.gz"
-      sha256 "e317411f9304a827477d0399e6adeaa816516ce60220f52eb0ef584ec8b4f291"
+      sha256 "12b56dda9a6e269058441400640023f1df64d08f9cf5e7160c453836887563d1"
 
       define_method(:install) do
         bin.install "potctl"
@@ -29,21 +29,21 @@ class Potctl < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Datasance/potctl/releases/download/v3.8.0-rc.1/potctl_3.8.0-rc.1_amd64.tar.gz"
-      sha256 "031c2d4de7497dd2d714ca02ddd2057b2682cb18d0ce0f5afec005b8f3b9beec"
+      sha256 "7677b213ecefe863461ff480745d66f959ca13501f7313bfcddce0569af13781"
       define_method(:install) do
         bin.install "potctl"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/Datasance/potctl/releases/download/v3.8.0-rc.1/potctl_3.8.0-rc.1_armv6.tar.gz"
-      sha256 "c220f63975db857feb50c85eed0884b30dd2b6f75f26fe9d65c4d1c2ad0bc6c7"
+      sha256 "fb734b30a4b0919b35a6a3cbcbb5dad755ebdb104f151b28433be897b6c78a53"
       define_method(:install) do
         bin.install "potctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Datasance/potctl/releases/download/v3.8.0-rc.1/potctl_3.8.0-rc.1_arm64.tar.gz"
-      sha256 "ac6eb2cd88b3313171a524631c2517d33ab10dd36dc810b449150f5ab62c6a46"
+      sha256 "d7fb2056c72a6eeb9873afe05cf717df95d41f95327d71bb87c80e94a8cdd4d7"
       define_method(:install) do
         bin.install "potctl"
       end
@@ -51,6 +51,6 @@ class Potctl < Formula
   end
 
   test do
-    system "#{bin}/{{ if eq (.Env.FLAVOR) "datasance" }}potctl{{ else }}iofogctl{{ end }} version"
+    system "#{bin}/{{ .Env.CLI_BINARY_NAME }} version"
   end
 end
