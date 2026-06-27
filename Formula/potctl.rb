@@ -10,7 +10,7 @@ class Potctl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Datasance/potctl/releases/download/v3.8.0-rc.1/potctl_3.8.0-rc.1_macos_amd64.tar.gz"
-      sha256 "a38f1e79356e7629ad76c2d3ae2bcc09d703b3dcb7e02e74be62c39c6d93fc07"
+      sha256 "4f60e297885898a6bea7257f81d8711d9df77279707d4f02b7ae9af6b5be66ef"
 
       define_method(:install) do
         bin.install "potctl"
@@ -18,7 +18,7 @@ class Potctl < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Datasance/potctl/releases/download/v3.8.0-rc.1/potctl_3.8.0-rc.1_macos_arm64.tar.gz"
-      sha256 "12b56dda9a6e269058441400640023f1df64d08f9cf5e7160c453836887563d1"
+      sha256 "b4ad9073763a9ae69889789c58f72b7d08321af24986c61cb6c127318096d46e"
 
       define_method(:install) do
         bin.install "potctl"
@@ -29,21 +29,21 @@ class Potctl < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Datasance/potctl/releases/download/v3.8.0-rc.1/potctl_3.8.0-rc.1_amd64.tar.gz"
-      sha256 "7677b213ecefe863461ff480745d66f959ca13501f7313bfcddce0569af13781"
+      sha256 "b40ae16a11ed50950089453970e07654ad6dc910a11b90dbee3e4b766b718059"
       define_method(:install) do
         bin.install "potctl"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/Datasance/potctl/releases/download/v3.8.0-rc.1/potctl_3.8.0-rc.1_armv6.tar.gz"
-      sha256 "fb734b30a4b0919b35a6a3cbcbb5dad755ebdb104f151b28433be897b6c78a53"
+      sha256 "3cdf63f11528fcb02353b359158741cfaa58c3713053f5185c83ee5a933e6ff2"
       define_method(:install) do
         bin.install "potctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Datasance/potctl/releases/download/v3.8.0-rc.1/potctl_3.8.0-rc.1_arm64.tar.gz"
-      sha256 "d7fb2056c72a6eeb9873afe05cf717df95d41f95327d71bb87c80e94a8cdd4d7"
+      sha256 "1080adcb2b0d30bc77ccba3f46e561acb283c77c685f6595d27b799891cc36b1"
       define_method(:install) do
         bin.install "potctl"
       end
@@ -51,6 +51,6 @@ class Potctl < Formula
   end
 
   test do
-    system "#{bin}/{{ .Env.CLI_BINARY_NAME }} version"
+    system "#{bin}/potctl version"
   end
 end
