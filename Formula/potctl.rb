@@ -10,7 +10,7 @@ class Potctl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Datasance/potctl/releases/download/v3.9.1/potctl_3.9.1_macos_amd64.tar.gz"
-      sha256 "026808da5fed496f5d4f62b1ddccf642eecec46665f86c1b1274e19e843c022a"
+      sha256 "8b9d48b3f4243bb54a86efb1fe5c0548329fd446049459735fa706d631f86c5a"
 
       define_method(:install) do
         bin.install "potctl"
@@ -18,7 +18,7 @@ class Potctl < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Datasance/potctl/releases/download/v3.9.1/potctl_3.9.1_macos_arm64.tar.gz"
-      sha256 "442a4cbcad4e0fa17cad82727823f963e3d9f2fbcdab2d2b11c83260a9830bdc"
+      sha256 "a7317f58e554379a09d88de82b89097b9929404844c281eec43da3b67a289a2f"
 
       define_method(:install) do
         bin.install "potctl"
@@ -29,21 +29,21 @@ class Potctl < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Datasance/potctl/releases/download/v3.9.1/potctl_3.9.1_amd64.tar.gz"
-      sha256 "1cfc47c85d1a603ee198bca4800a0c6745e6d13aa34606dcae206caba928da8b"
+      sha256 "36a0706d220d50ae01567efe08d3efc7e62b03c93b2c44f1d524f390452545ad"
       define_method(:install) do
         bin.install "potctl"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/Datasance/potctl/releases/download/v3.9.1/potctl_3.9.1_armv6.tar.gz"
-      sha256 "5a88a1b81e3a39b3bfa5e4179f9f1e671549254f76a236281b7805885b7a866d"
+      sha256 "5bc6baaf45a5192bc00b06e2a8041e7164cfeae3d7822ca1f5af99b9c7b11aa3"
       define_method(:install) do
         bin.install "potctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Datasance/potctl/releases/download/v3.9.1/potctl_3.9.1_arm64.tar.gz"
-      sha256 "377c8d9acf48cab5d82e2cec4a2554cd926a3a8366e3fd38c0628c79695a5c7d"
+      sha256 "26ee849f2d2c0639bea98a3fd1d17e786800afe88465f8923b8214377ef79b3f"
       define_method(:install) do
         bin.install "potctl"
       end
