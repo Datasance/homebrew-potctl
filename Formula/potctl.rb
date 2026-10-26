@@ -5,20 +5,20 @@
 class Potctl < Formula
   desc "CLI for Datasance potctl"
   homepage "https://github.com/Datasance/potctl"
-  version "3.9.2"
+  version "3.9.3-rc.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Datasance/potctl/releases/download/v3.9.2/potctl_3.9.2_macos_amd64.tar.gz"
-      sha256 "edff964f67b2c20ebec337bc93aecc2a3b7fe85c1b6026cb326885ea3ffd2df0"
+      url "https://github.com/Datasance/potctl/releases/download/v3.9.3-rc.1/potctl_3.9.3-rc.1_macos_amd64.tar.gz"
+      sha256 "61c2364f5b79ba739dc9624b9cc83185d1c418c4a04f84ea3433d425c70d1789"
 
       define_method(:install) do
         bin.install "potctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Datasance/potctl/releases/download/v3.9.2/potctl_3.9.2_macos_arm64.tar.gz"
-      sha256 "17398dc757769415163155ce58be61d430cc32cec351e87539e83109de6a769a"
+      url "https://github.com/Datasance/potctl/releases/download/v3.9.3-rc.1/potctl_3.9.3-rc.1_macos_arm64.tar.gz"
+      sha256 "705ddcad275e2b6cd9918490038c6f14c17a71e0067a823fa5073036d9ddf287"
 
       define_method(:install) do
         bin.install "potctl"
@@ -28,22 +28,22 @@ class Potctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Datasance/potctl/releases/download/v3.9.2/potctl_3.9.2_amd64.tar.gz"
-      sha256 "5fbe24c2484265630ccaf3a79358d6d169fc006eeee444b42fef4128982d7ca2"
+      url "https://github.com/Datasance/potctl/releases/download/v3.9.3-rc.1/potctl_3.9.3-rc.1_amd64.tar.gz"
+      sha256 "eb8fef1e320c602aed2940a6f602600aefb535445486504323ed94f3841a7d05"
       define_method(:install) do
         bin.install "potctl"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Datasance/potctl/releases/download/v3.9.2/potctl_3.9.2_armv6.tar.gz"
-      sha256 "baf5842bbb775bd78202546ae2a5acd4b7ee626cf61f6b8ff47357714eb1af68"
+      url "https://github.com/Datasance/potctl/releases/download/v3.9.3-rc.1/potctl_3.9.3-rc.1_armv6.tar.gz"
+      sha256 "a7f934fc58645139293a159285a233c50029460f9dd7a07830e4cae598a93a1b"
       define_method(:install) do
         bin.install "potctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Datasance/potctl/releases/download/v3.9.2/potctl_3.9.2_arm64.tar.gz"
-      sha256 "ddd397fd21222a7c7dfcfcfdb52c2c89c7d25fa4ea77f4ab4883e11416c57503"
+      url "https://github.com/Datasance/potctl/releases/download/v3.9.3-rc.1/potctl_3.9.3-rc.1_arm64.tar.gz"
+      sha256 "5e77cbff4c30c0658f50b3fb6802cf16615b40b21e43295ad2154f336f5d40cc"
       define_method(:install) do
         bin.install "potctl"
       end
