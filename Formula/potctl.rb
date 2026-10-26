@@ -10,7 +10,7 @@ class Potctl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Datasance/potctl/releases/download/v3.9.2-rc.1/potctl_3.9.2-rc.1_macos_amd64.tar.gz"
-      sha256 "44213cb00367fe3dbf1c06c83e44f1c5c7de06ab9dda4e9e2da6a90502430f26"
+      sha256 "f44528e97229894ee4abe9eff6523ec7b79b481dfdf176963cc474bcb62239da"
 
       define_method(:install) do
         bin.install "potctl"
@@ -18,7 +18,7 @@ class Potctl < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Datasance/potctl/releases/download/v3.9.2-rc.1/potctl_3.9.2-rc.1_macos_arm64.tar.gz"
-      sha256 "05371471ccf2e1751e747d81b09d852b0840a5409c1b60cb22f3b51dae4e2587"
+      sha256 "f6429050eb41c3e48b6cfa5119259583edef894fd4488dee4a167a62bf7525d1"
 
       define_method(:install) do
         bin.install "potctl"
@@ -29,21 +29,21 @@ class Potctl < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Datasance/potctl/releases/download/v3.9.2-rc.1/potctl_3.9.2-rc.1_amd64.tar.gz"
-      sha256 "fafc8f1f5ed18f153542b7d08d543f1a42cd677fdf9864d72c9f268045c9e885"
+      sha256 "02890721e17a315128ed2afed784823c2f29ad065049c5100d9d6d55503b686e"
       define_method(:install) do
         bin.install "potctl"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/Datasance/potctl/releases/download/v3.9.2-rc.1/potctl_3.9.2-rc.1_armv6.tar.gz"
-      sha256 "f14849e5dcc68bc9b8f8fbbad1f7dd0abee9f486e4d5ab5b519c0b419d11cbe7"
+      sha256 "5cb7250d143cf10305c8f9ef6c1e09510382d9785b083e5c937337baa071ee1d"
       define_method(:install) do
         bin.install "potctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Datasance/potctl/releases/download/v3.9.2-rc.1/potctl_3.9.2-rc.1_arm64.tar.gz"
-      sha256 "f2efa7ab2d47bdc5a7714e3c975212e793f4da69c693d2fd31990311846695b0"
+      sha256 "a5f32f9dcd35a11de40d79c50827592988a45e506898e635d7061c4ac5921a37"
       define_method(:install) do
         bin.install "potctl"
       end
